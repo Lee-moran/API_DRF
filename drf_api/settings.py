@@ -49,11 +49,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOST'),
-    'localhost', 
-    'https://project5-lee.herokuapp.com/'
-]
+# ALLOWED_HOSTS = [
+#     os.environ.get('ALLOWED_HOST'),
+#     'localhost', 
+#     'https://project5-lee.herokuapp.com/'
+# ]
+
+ALLOWED_HOSTS = ["*"]
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
@@ -186,3 +188,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
