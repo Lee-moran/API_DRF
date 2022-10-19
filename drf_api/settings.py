@@ -52,7 +52,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost', 
-    'https://3000-leemoran-project5-sfywyd9g86w.ws-eu71.gitpod.io'
+    'https://project5-lee.herokuapp.com/'
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
